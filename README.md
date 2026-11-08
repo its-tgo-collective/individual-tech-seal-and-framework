@@ -1,6 +1,7 @@
 # Individual Tech Seal (ITS)
 
 [![DOI](https://zenodo.org/badge/1450365249.svg)](https://doi.org/10.5281/zenodo.24055640)
+[![DOI](https://zenodo.org/badge/1450460074.svg)](https://doi.org/10.5281/zenodo.24056813)
 
 A protection architecture for unalterable licensing and autonomous enforcement in digital works (software, art, data).
 
