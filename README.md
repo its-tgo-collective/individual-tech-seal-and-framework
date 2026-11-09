@@ -1,5 +1,7 @@
 # Individual Tech Seal (ITS)
 
+> **NEW:** Read the [STRATEGIC_IMPACT.md](STRATEGIC_IMPACT.md) to understand the economic and regulatory leverage of this framework.
+
 [![DOI](https://zenodo.org/badge/1450365249.svg)](https://doi.org/10.5281/zenodo.24055640)
 [![DOI](https://zenodo.org/badge/1450460074.svg)](https://doi.org/10.5281/zenodo.24056813)
 
