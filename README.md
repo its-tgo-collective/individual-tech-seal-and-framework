@@ -3,10 +3,9 @@
 
 > **NEW:** Read the [STRATEGIC_IMPACT.md](STRATEGIC_IMPACT.md) to understand the economic and regulatory leverage of this framework.
 
-[![DOI](https://zenodo.org/badge/1450365249.svg)](https://doi.org/10.5281/zenodo.24055640)
-[![DOI](https://zenodo.org/badge/1450460074.svg)](https://doi.org/10.5281/zenodo.24056813)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055640.svg)](https://doi.org/10.5281/zenodo.24055640)
 
-**Status:** Release v1.2.0 — Hardened & Governance-Aligned
+**Status:** Release v1.3.0 — Hardened & Governance-Aligned
 **License for this Text:** CC0 1.0 Universal (Public Domain)
 **License for Protected Works:** ITS Public License v1.1 (See LICENSE file)
 
