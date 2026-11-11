@@ -1,19 +1,19 @@
 # Individual Tech Seal — Core Technical Specification
 
-**Version:** 1.0.0
-**Status:** Initial Release
+**Version:** 1.2.0
+**Status:** Release
 **License:** CC0 1.0
 
 ## 1. Purpose
 ITS defines a stateless execution environment for digital works. Every state transition (usage, duplication, derivation) is bound to a single-use tuple of:
 - time window,
 - device identity derived from hardware (TEE/PUF),
-- a volatile counter vector (Z1-Z6),
+- a volatile counter vector (Z1-Z7),
 - the creator's Biography Fragment.
 
 No persistent authorization state is stored. The license rules are enforced through cryptographic commitments and physical hardware binding.
 
-## 2. Core principles (Updated)
+## 2. Core Principles
 
 1. **Zero Trust** — no trust in any user or network.
 2. **Blindness** — the system does not evaluate identity. It only checks the Z6 capability vector.
@@ -24,16 +24,17 @@ No persistent authorization state is stored. The license rules are enforced thro
 7. **Non-Transferability of Core Intent** — The copyright may be sold, but the Z6 Vector and Biography Fragment cannot. Acquisitions under duress are void.
 8. **Cryptographic Visibility Control** — The Work is stored encrypted. The Biography Fragment acts as the decryption key. Without the key, the Work is verifiable on the blockchain (the hash exists) but cannot be displayed or read by unauthorized humans or machines. The owner decides who can view it.
 
-## 3. The six counters (Z1–Z6)
+## 3. The Seven Counters (Z1–Z7)
 
 | Counter | Role | Trigger |
 |---------|------|---------|
-| Z1 | Action counter | Incremented on each legal action |
-| Z2 | Intrusion counter | Incremented on any validation failure |
-| Z3 | Audit shield | Incremented on unauthorized audit attempt |
-| Z4 | Generation | Incremented on node rebirth |
-| Z5 | Device heartbeat | TEE-only monotonic counter |
+| Z1 | Action counter | Incremented on each legal action. |
+| Z2 | Intrusion counter | Incremented on any validation failure. |
+| Z3 | Audit shield | Incremented on unauthorized audit attempt or Aura brute-force. |
+| Z4 | Generation | Incremented on node rebirth. |
+| Z5 | Device heartbeat | TEE-only monotonic counter. |
 | Z6 | **License Vector** | Hardware-enforced allowed instructions. Checks for the Biography Fragment. Fires an alarm and penalty on violation. |
+| Z7 | **Attribution Integrity** | Validates the dynamic `NOTICE` ledger. Acts as a helper for honest mistakes. Triggers Z6 on malicious attribution removal. |
 
 All counters are derived from the PUF/TEE, incremented after each action, never persistently stored, and immediately zeroized. Physical violations trigger a WORM/eFuse burn-in.
 
@@ -45,9 +46,9 @@ Holds current generation, seed, commitment, timestamp, and the active Biography 
 ### 4.2 Storage Chain (Persistent)
 Append-only archive. Holds only cryptographic commitments and signatures. Never holds plaintext. Records royalty transactions, usage proofs, penalty receipts, and permanent violation marks.
 
-## 4.3 Cryptographic Visibility & The Forensic Trap (New Section)
+## 5. Cryptographic Visibility & The Forensic Trap
 
-**The Mechanism:**
+**The Mechanism (Visibility Control):**
 The Work is encrypted using the Creator's Biography Fragment as the private key. It is stored on the decentralized network in its encrypted form. 
 *   **For Humans (Authorized):** The Creator can grant a "Viewing Token" to specific individuals. The ITS layer uses this token to decrypt the Work locally on the viewer's device.
 *   **For AI (Unauthorized):** An AI scraper ingesting the data sees only cryptographic noise. Even if the AI bypasses the encryption, the Z6 Vector blocks the rendering of the data because the hardware lacks the valid Biography Fragment signature.
@@ -58,11 +59,26 @@ If a malicious actor attempts to extract, brute-force, or steal the Biography Fr
 2.  **Z6 Hardware Lockdown:** The Z6 Vector freezes the execution of the decryption process and locks the hardware.
 3.  **Immutable Proof:** A cryptographic hash of the stolen/attempted key and the attacker's metadata is burned into the Storage Chain (WORM/eFuse).
 4.  **Smart Contract Penalty:** The Smart Contract triggers an immediate financial penalty against the attacker's registered wallet (if applicable) or flags the attacker's hardware ID on the TGO Blacklist.
-The Creator is instantly notified: *"Someone attempted to steal your Aura."* The proof is mathematically undeniable.
-// Individual Tech Seal — reference implementation
-// IMPORTANT: Illustrative only. Do not use in production.
 
-## 5. Reference Implementation (Rust Excerpt)
+The Creator is instantly notified: *"Someone attempted to steal your Aura."* The proof is mathematically undeniable.
+
+## 6. Hardware Enforcement & The NOTICE System
+
+**The Z6 Vector:**
+The Z6 Vector is the hardware-enforced capability vector that defines permitted actions. It is bound to the chip. If an AI system attempts to scrape the Work, Z6 blocks the access. The attempt itself is the violation.
+
+**The Z7 Vector (Attribution Integrity & Helper Mode):**
+The Z7 counter validates the dynamic `NOTICE` file against the actual execution state.
+*   **Helper Mode:** If a developer forgets to attribute a dependency, Z7 provides an automated error report to help them fix the omission. It does not kill the node. It acts as a supportive tool.
+*   **Punitive Mode (Z6 Trigger):** If the system detects a malicious removal of attribution (Attribution Laundering) intended to steal ownership, Z6 triggers a Hard Lockdown and zeroizes the node.
+
+## 7. The Constitutional Amendment Protocol (Swarm & Dongle)
+To prevent a single instance (state or corporation) from breaking the license while allowing the society to adapt it:
+*   **Threshold Consensus:** Changes require an 80% supermajority of hardware-bound nodes (PUF/Dongle). Voting power is decentralized among actual individuals (Proof of Personhood).
+*   **Time-Lock:** Any approved amendment is subject to a mandatory 6-month time-lock before taking effect.
+*   **Forking:** The minority rejecting the change can fork the system and continue under the old rules. No one is forced, but no one can buy the system.
+
+## 8. Reference Implementation (Rust Excerpt)
 
 ```rust
 // Individual Tech Seal — reference implementation
