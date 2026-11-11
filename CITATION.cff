@@ -3,8 +3,8 @@ message: "If you use this framework, please cite it as below."
 title: "Individual Tech Seal (ITS) Framework"
 authors:
   - name: "The ITS-TGO Collective"
-version: 1.1.0
-doi: "10.5281/zenodo.24055641"
-date-released: "2026-11-08"
+version: 1.2.0
+doi: "10.5281/zenodo.24055640"
+date-released: "2026-11-11"
 license: CC0-1.0
 repository-code: "https://github.com/its-tgo-collective/individual-tech-seal-and-framework"
