@@ -1,0 +1,44 @@
+{
+  "title": "Individual Tech Seal (ITS) — .seal Sovereign Data Container Specification",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-11-15",
+  "license": "CC0-1.0",
+  "access_right": "open",
+  "creators": [
+    { "name": "The ITS-TGO Collective" }
+  ],
+  "keywords": [
+    "data-sovereignty",
+    "fuzzy-extractor",
+    "PUF",
+    "TEE",
+    "AI-governance",
+    "CLOUD-Act",
+    "seal-format",
+    "nightshade",
+    "nepenthes",
+    "context-bomb"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24055640",
+      "relation": "isReferencedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "10.5281/zenodo.24056813",
+      "relation": "isPartOf",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/its-tgo-collective/individual-tech-seal-and-framework",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    { "identifier": "its-collective" }
+  ],
+  "grants": []
+}
