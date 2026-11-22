@@ -280,9 +280,4 @@ To ensure market penetration and force compliance from US tech giants, the `.sea
 *   **Data Poisoning:** Shan et al.: *Nightshade: Prompt-Specific Poisoning Attacks on Text-to-Image Generative Models*, IEEE S&P 2024. / Nepenthes (2025) – Tarpit for AI Crawlers.
 
 *   **CLOUD Act / Legal:** EDPB Recommendations 01/2020 and Schrems II. Encryption is only an effective complementary measure when decryption keys are held exclusively in the EU and data never appears in plaintext in third countries. (Exactly the PUF/TEE approach of the `.seal` format.)
-
-```
-
-
-
 ---
