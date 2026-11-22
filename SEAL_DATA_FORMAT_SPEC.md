@@ -1,5 +1,4 @@
 ---
-
 title: "Individual Tech Seal (ITS) — The .seal Sovereign Data Container Specification"
 
 version: "1.0.0"
@@ -31,11 +30,7 @@ related:
 authors:
 
   - name: "The ITS-TGO Collective"
-
 ---
-
-
-
 # Individual Tech Seal (ITS) — The .seal Sovereign Data Container Specification
 
 
