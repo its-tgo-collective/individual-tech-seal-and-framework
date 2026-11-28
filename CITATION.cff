@@ -1,21 +1,22 @@
 cff-version: 1.2.0
-message: "If you use the ITS .seal format, please cite both the specification and the license."
-title: "Individual Tech Seal (ITS) — .seal Sovereign Data Container Specification"
-type: software
-version: 1.0.0
-doi: 10.5281/zenodo.24056813
-date-released: 2026-11-15
-license: CC0-1.0
-repository-code: https://github.com/its-tgo-collective/individual-tech-seal-and-framework
+message: "If you use this framework, please cite it as below."
+title: "Individual Tech Seal (ITS) Framework"
 authors:
   - name: "The ITS-TGO Collective"
+version: 1.3.0
+doi: "10.5281/zenodo.24055640"
+date-released: "2026-11-11"
+license: CC0-1.0
+repository-code: "https://github.com/its-tgo-collective/individual-tech-seal-and-framework"
 references:
   - type: generic
-    title: "ITS Public License & Framework"
-    doi: 10.5281/zenodo.24055640
-  - type: generic
-    title: "TGO – Tech-Governance-Organisation"
-    doi: 10.5281/zenodo.24056813
+    title: "TGO Framework (Tech-Governance-Organization)"
+    doi: "10.5281/zenodo.24056813"
   - type: generic
     title: "ITS Art & NFT Protocol"
-    doi: 10.5281/zenodo.24093654
+    doi: "10.5281/zenodo.24093654"
+  - type: software
+    title: "Do-Not-Sense Mesh (DNS-Mesh)"
+    repository-code: "https://github.com/its-tgo-collective/do-not-sense-mesh"
+    # Sobald das Mesh-Repo auf Zenodo released ist, füge hier die DOI ein:
+    # doi: "10.5281/zenodo.XXXXXXXXX"
