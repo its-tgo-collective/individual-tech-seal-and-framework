@@ -1,7 +1,7 @@
 {
   "title": "Individual Tech Seal (ITS) — .seal Sovereign Data Container Specification",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "publication_date": "2026-11-15",
   "license": "CC0-1.0",
   "access_right": "open",
@@ -18,21 +18,23 @@
     "seal-format",
     "nightshade",
     "nepenthes",
-    "context-bomb"
+    "context-bomb",
+    "6G-ISAC",
+    "dns-mesh"
   ],
   "related_identifiers": [
-    {
-      "identifier": "10.5281/zenodo.24055640",
-      "relation": "isReferencedBy",
-      "resource_type": "other"
-    },
     {
       "identifier": "10.5281/zenodo.24056813",
       "relation": "isPartOf",
       "resource_type": "other"
     },
     {
-      "identifier": "https://github.com/its-tgo-collective/individual-tech-seal-and-framework",
+      "identifier": "10.5281/zenodo.24093654",
+      "relation": "isReferencedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/its-tgo-collective/do-not-sense-mesh",
       "relation": "isSupplementedBy",
       "resource_type": "software"
     }
